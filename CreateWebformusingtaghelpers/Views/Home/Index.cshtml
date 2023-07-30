@@ -1,0 +1,25 @@
+﻿@model CreateWebformusingtaghelpers.Models.Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+@*    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+</div>
+@*/*The .container class provides a responsive fixed width container*@
+<div class ="container">
+    <div class="col-sm-4">
+        <form class="d-grid" asp-action="Index" asp-controller="Home" method="post">
+            <input asp-for="Rollnum" placeholder="Enter RollNumber" class="form-control"/>
+            <br>
+            <input asp-for="Name" placeholder="Enter Name" class="form-control" />
+            <br>
+            <input asp-for="Age" placeholder="Enter Age" class="form-control" />
+            <br>
+            <input asp-for="Email" placeholder="Enter Email" class="form-control" />
+            <br>
+            <input type="submit" value="submit" class="btn btn-outline-primary" />
+        </form>
+    </div>
+</div>
