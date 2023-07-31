@@ -56,11 +56,26 @@ form-floating is used for floating label placeholder is required even they not s
 #endregion
 #region Model validator
 /*
+ * asp-validation
  * gives as attributes to restrict from invalid data
  * model bider just  only not bind our value also model validator
  * runs after the model binding
  * 1--[required] :null values are not allowed custom messege allowed
  * 2--[stringLength(15,Minimumlength)]:specify max and min length of string
- * 3--
+ * 3--[Range(n1,n2)]
+ * 4--[Regularexpression("regix")]
+ * 5--[Compare("propname",error)]
+ * 6--[URL(error)]
+ * 7--[MaxLength]
+ * 8--[MinLength]
+ * 
+ */
+#endregion
+
+#region Validation Tag Helper
+/*asp-validation-summary
+ * <div asp-validation-summary="All">
+    for validation of all fields in the form :
+   </div>
  */
 #endregion

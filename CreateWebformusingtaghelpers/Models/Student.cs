@@ -28,6 +28,9 @@ namespace CreateWebformusingtaghelpers.Models
         [Compare("Password",ErrorMessage ="Password must be same")]
         public string? ConfirmPassword { get; set; }
 
+        //[Url(ErrorMessage ="Invalid Url")]
+        //public string? Url { get; set; }
+
 
 
 

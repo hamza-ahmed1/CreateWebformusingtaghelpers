@@ -20,6 +20,10 @@ namespace CreateWebformusingtaghelpers.Controllers
         [HttpPost]
         public IActionResult Index(Student s)
         {
+            if(ModelState.IsValid)
+            {
+                ModelState.Clear();
+            }
             return View();
             //return "RollNumber :" +s.Rollnum+ "\nName :" +s.Name+"\nEmail :"
             //+s.Email+"\nGender :"+s.Gender+"\nMartial Status :"+s.MartialStautus;

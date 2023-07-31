@@ -10,7 +10,11 @@
 @*/*The .container class provides a responsive fixed width container*@
 <div class ="container">
     <div class="col-sm-4">
+ @*       <div asp-validation-summary="All">
+     for validation of all fields in the form :
+        </div>*@
         <form class="d-grid" asp-action="Index" asp-controller="Home" method="post">
+            
             <div class="form-floating">
                 <input asp-for="StudentID" class="form-control" placeholder="Enter StudentID" />
                 <label asp-for="StudentID">Enter StudentID</label>
@@ -26,6 +30,14 @@
                 <br />
             <br/>
             </div>
+            <div class="form-floating">
+                <input asp-for="Email" placeholder="Enter Email" class="form-control" />
+                <label asp-for="Email">Enter Email</label>
+                <span asp-validation-for="Email" style="color:red"></span>
+
+                <br />
+            </div>
+            <br />
             <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
                 <option value="">Select Gender</option>
                 <span asp-validation-for="Gender" style="color:red"></span>
@@ -56,15 +68,9 @@
 
             </div>
 
-            <div class="form-floating">
-            <input asp-for="Email" placeholder="Enter Email" class="form-control" />
-            <label asp-for="Email" >Enter Email</label>
-            <span asp-validation-for="Email" style="color:red"></span>
             
-            <br/>
-            </div>
                 
-            <br/>
+        
             
 
             <div class="form-floating">
