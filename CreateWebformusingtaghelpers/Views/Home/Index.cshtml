@@ -14,20 +14,28 @@
             <div class="form-floating">
                 <input asp-for="Rollnum" class="form-control"  placeholder="Enter RollNumber" />
                 <label asp-for="Rollnum">Enter RollNumber</label>
+                <span asp-validation-for="Rollnum" style="color:red"></span>
+                <br/>
+
             <br/>
             </div>
             <div class="form-floating ">
             <input asp-for="Name" placeholder="Enter Name" class="form-control" />
-                <label asp-for="Name">Enter Name</label>
+             <label asp-for="Name">Enter Name</label>
+             <span asp-validation-for="Name" style="color:red"></span>
+                <br />
             <br/>
             </div>
             <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
                 <option value="">Select Gender</option>
+                <span asp-validation-for="Gender" style="color:red"></span>
+                <br />
             </select>
             <br/>
-            <label >Married:</label>
+            @*this is not neccessory for student*@
+           @* <label >Married:</label>
             <div class="form-check" >
-                <input class="form-check-input" type="radio" asp-for="MartialStautus" value="Married" required>
+                <input class="form-check-input" type="radio" asp-for="MartialStautus" value="Married" >
                 <label class="form-check-label">
                     Married
                 </label>
@@ -38,10 +46,12 @@
                     Unmarried
                 </label>
             </div>
-            <br/>
+            <br/>*@
             <div class="form-floating">
             <input asp-for="Age" placeholder="Enter Age" class="form-control" />
             <label asp-for="Age" >Enter Age</label>
+            <span asp-validation-for="Age" style="color:red"></span>
+                <br />
             <br/>
 
             </div>
@@ -49,6 +59,9 @@
             <div class="form-floating">
             <input asp-for="Email" placeholder="Enter Email" class="form-control" />
             <label asp-for="Email" >Enter Email</label>
+                <span asp-validation-for="Email" style="color:red"></span>
+                <br />
+            
             <br/>
 
             </div>

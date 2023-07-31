@@ -54,3 +54,13 @@ form-floating is used for floating label placeholder is required even they not s
  * 
  */
 #endregion
+#region Model validator
+/*
+ * gives as attributes to restrict from invalid data
+ * model bider just  only not bind our value also model validator
+ * runs after the model binding
+ * 1--[required] :null values are not allowed custom messege allowed
+ * 2--[stringLength(15,Minimumlength)]:specify max and min length of string
+ * 3--
+ */
+#endregion

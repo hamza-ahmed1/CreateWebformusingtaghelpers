@@ -18,10 +18,11 @@ namespace CreateWebformusingtaghelpers.Controllers
             return View();
         }
         [HttpPost]
-        public string Index(Student s)
+        public IActionResult Index(Student s)
         {
-            return "RollNumber :" +s.Rollnum+ "\nName :" +s.Name+"\nEmail :"
-            +s.Email+"\nGender :"+s.Gender+"\nMartial Status :"+s.MartialStautus;
+            return View();
+            //return "RollNumber :" +s.Rollnum+ "\nName :" +s.Name+"\nEmail :"
+            //+s.Email+"\nGender :"+s.Gender+"\nMartial Status :"+s.MartialStautus;
         }
 
         public IActionResult Privacy()
